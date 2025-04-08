@@ -3,7 +3,7 @@
 // console.log(arr[0]);
 // console.log(arr.at(-1));
 
-const books = ["book1", "book2", "book3"];
+// const books = ["book1", "book2", "book3"];
 
 // books.push("book4");
 // books.shift();
@@ -69,10 +69,74 @@ const books = ["book1", "book2", "book3"];
 
 // console.log(vowelNames);
 
-const items = ["apple", "banana", "apple", "orange", "banana", "grapes"];
+// const items = ["apple", "banana", "apple", "orange", "banana", "grapes"];
 
-const singleItems = items.filter((item, index) => {
-    return items.indexOf(item) === index;
-})
+// const singleItems = items.filter((item, index) => {
+//     return items.indexOf(item) === index;
+// })
 
-console.log(singleItems);
+// console.log(singleItems);
+
+// const marks = [75, 88, 92, 64, 81];
+
+//  const addedvalues = marks.reduce((acc, curr) => {
+
+//         return acc + curr;
+
+//  },0);
+
+//  console.log(addedvalues);
+
+//  console.log(`average = `, addedvalues/marks.length);
+
+
+// const studentMarks = [72, 85, 91, 42, 64];
+
+// const someoneFailed = studentMarks.some((num) => num < 50);
+
+// console.log(someoneFailed);
+
+
+// const marks2 = [66, 78, 84, 90, 55];
+
+// const allPassed = marks2.every((num) => num > 50);
+
+// console.log(allPassed);
+
+
+const products = [
+    { id: 1, name: "Shirt", price: 1200 },
+    { id: 2, name: "Shoes", price: 2500 },
+    { id: 3, name: "Cap", price: 400 },
+    { id: 4, name: "Shoes", price: 2500 }
+  ];
+
+  products.forEach((value) => {
+    console.log(value.name);
+  });
+
+  products.find((value) => {
+    
+    if(value.id > 3){
+        console.log(value);
+    }
+  });
+
+  const cheapProducts = products.filter((prod) => (prod.price < 2000));
+  console.log(cheapProducts);
+
+  const uniqueProducts = products.filter((prod, index,arr) => {
+
+    return arr.findIndex((item) => item.name === prod.name) === index;
+  })
+
+  console.log(uniqueProducts);
+
+  const isShirt = products.some((prod) => (prod.name === "Shirt"));
+  console.log(isShirt);
+
+  const newElementArray = products.map((prod) => (prod));
+const newElement = {id: 5, name : "jeans", price: 12000};
+
+  newElementArray.push(newElement);
+  console.log(newElementArray);
