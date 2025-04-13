@@ -88,16 +88,26 @@
 //   console.log(val);
 // });
 
-const movie = {
-  name: "Interstellar",
-  director: "Christopher Nolan",
-  year: 2014,
-  rating: 8.6
-};
+// const movie = {
+//   name: "Interstellar",
+//   director: "Christopher Nolan",
+//   year: 2014,
+//   rating: 8.6
+// };
 
-const values = Object.values(movie);
+// const values = Object.values(movie);
 
-values.forEach((value) => {
+// values.forEach((value) => {
 
-console.log(value);
+// console.log(value);
+// })
+
+function getData() {
+
+const res = fetch("link")
+.then((res) => res.json())
+.then((json) => {
+  console.log(json);
 })
+
+}
